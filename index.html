@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS Accounts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun theme-icon sun"></i>
+        <i class="fas fa-moon theme-icon moon"></i>
+    </div>
+    
+  <!-- Loading Screen -->
+<div id="loading-screen">
+  <video id="loading-video" autoplay muted loop playsinline>
+    <source src="Loading.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div class="nav-buttons-container">
+    <div class="nav-corner-button">
+        <a href="boosting.html" class="boost-nav-btn">
+            <i class="fas fa-bolt"></i> Farming/Boosting
+        </a>
+    </div>
+    
+            <div class="nav-corner-button">
+                <button class="sell-nav-btn" id="sellAccountBtn">
+                    <i class="fas fa-dollar-sign"></i> Sell Your Account
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Sell Account Popup Modal -->
+    <div class="popup-overlay" id="sellAccountPopup">
+        <div class="popup-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h2>Sell Your Account</h2>
+            <p class="popup-subtitle">Sell your Account using the Platform of your Choice</p>
+            
+            <div class="social-links">
+                <a href="https://www.epicnpc.com/members/voldigoad.1579253/" 
+                   class="social-link epicnpc" target="_blank">
+                    <i class="fas fa-store"></i>
+                    <span>EpicNPC</span>
+                </a>
+                
+                <a href="https://discord.com/users/1046773939843645503" 
+                   class="social-link discord" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                
+                <a href="https://www.instagram.com/bbsvoldigoadd/" 
+                   class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://mail.google.com/mail/u/0/?to=voldigoadzeref@gmail.com&su=Interested+in+BBS+Accounts&body=Hello,+I'm+interested+in+your+Bleach+Brave+Souls+accounts/services&fs=1&tf=cm" 
+                   class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                
+                <a href="https://api.whatsapp.com/send/?phone=905075638741&text=Hello%2C+I'm+interested+in+your+Bleach+Brave+Souls+accounts%2Fservices&type=phone_number&app_absent=0" 
+                   class="social-link whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                
+                <a href="https://www.facebook.com/bbsvoldigoadd" 
+                   class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header>
+     <div class="particles" id="particles"></div>
+        <div class="header-content container">
+            <h1>BBS VOLDIGOAD MARKET</h1>
+            <p class="subtitle">Find the perfect Bleach Brave Souls account with specific cards you want</p>
+            <!-- Buy Here Popup Trigger -->
+   <a href="#" class="btn pulse" id="buyHereBtn">
+        <i class="fas fa-shopping-cart"></i>
+        Buy Here
+    </a>
+
+    <!-- Enhanced Buy Here Popup Modal -->
+    <div class="popup-overlay" id="buyHerePopup">
+        <div class="popup-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h2>The Choice is Yours</h2>
+            <p class="popup-subtitle">Send your Account Number via the desired Platform</p>
+            
+            <div class="social-links">
+                <a href="https://www.epicnpc.com/members/voldigoad.1579253/" 
+                   class="social-link epicnpc" target="_blank">
+                    <i class="fas fa-store"></i>
+                    <span>EpicNPC</span>
+                </a>
+                
+                <a href="https://discord.com/users/1046773939843645503" 
+                   class="social-link discord" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                
+                <a href="https://www.instagram.com/bbsvoldigoadd/" 
+                   class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://mail.google.com/mail/u/0/?to=voldigoadzeref@gmail.com&su=Interested+in+BBS+Accounts&body=Hello,+I'm+interested+in+your+Bleach+Brave+Souls+accounts/services&fs=1&tf=cm" 
+                   class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                
+                <a href="https://api.whatsapp.com/send/?phone=905075638741&text=Hello%2C+I'm+interested+in+your+Bleach+Brave+Souls+accounts%2Fservices&type=phone_number&app_absent=0" 
+                   class="social-link whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.facebook.com/bbsvoldigoadd" 
+                   class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    </header>
+
+
+      <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chatBubble">
+        <img src="skull.png" alt="Support" class="bubble-icon" />
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="header-avatar">
+                </div>
+                <div class="header-info">
+                    <h3>Account Support</h3>
+                    <p>Online now</p>
+                </div>
+                <div class="status-dot"></div>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="typing-indicator">
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Chat Input -->
+             <div class="chat-input">
+                <div class="question-selector">
+                    <button class="select-button">Select a question here</button>
+                    <div class="question-dropdown">
+                        <div class="question-option" data-question="buy">How can I buy an account?</div>
+                        <div class="question-option" data-question="sell">How can I sell my account?</div>
+                        <div class="question-option" data-question="payment">What payment methods do you accept?</div>
+                        <div class="question-option" data-question="delivery">How long does delivery take?</div>
+                        <div class="question-option" data-question="response">How fast do sellers respond?</div>
+                        <div class="question-option" data-question="account-delivery">How is the account delivered?</div>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text" class="message-input" placeholder="Type your message...">
+                    <button class="send-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                            <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+    <main class="container">
+        <div class="category-tabs">
+            <button class="category-tab" data-category="fresh">Fresh Accounts</button>
+            <button class="category-tab" data-category="farmed">Farmed Accounts</button>
+            <button class="category-tab" data-category="endgame">Mid/End Game</button>
+        </div>
+        
+        <div id="sub-filters-container" class="sub-filters hidden">
+            <button class="sub-filter" data-tag="new">New Arrivals</button>
+            <button class="sub-filter" data-tag="top-tier">Top Tier</button>
+        </div>
+        
+        <div id="card-filters" class="card-filters">
+            <!-- Sections will be added dynamically by JavaScript -->
+        </div>
+        
+        <div class="sort-controls">
+            <div class="selected-cards-info">
+                <span id="selected-cards-count">0 cards selected</span>
+                <span class="clear-filters" id="clear-cards">Clear</span>
+            </div>
+            <div class="sort-buttons">
+                <button class="sort-btn active" data-sort="orbs-desc">
+                    <i class="fas fa-sort-amount-down"></i> Most Orbs
+                </button>
+                <button class="sort-btn" data-sort="orbs-asc">
+                    <i class="fas fa-sort-amount-up"></i> Least Orbs
+                </button>
+            </div>
+        </div>
+        
+        <table class="accounts-table">
+            <thead>
+                <tr>
+                    <th>Account Code</th>
+                    <th>Account Links</th>
+                    <th>Spirit Orbs</th>
+                </tr>
+            </thead>
+            <tbody id="account-list">
+                <tr class="no-results">
+                    <td colspan="3">
+                        <i class="fas fa-search"></i>
+                        <p>Please select a category to view available accounts</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+<footer id="contact">
+    <div class="footer-content">
+        <p class="footer-text">Find the perfect Bleach Brave Souls service for your needs</p>
+        
+        <div class="footer-social-links">
+            <a href="https://www.epicnpc.com/members/voldigoad.1579253/" class="social-link" target="_blank"><i class="fas fa-store"></i></a>
+            <a href="https://discord.com/users/1046773939843645503" class="social-link" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/bbsvoldigoadd/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?to=voldigoadzeref@gmail.com&su=Interested+in+BBS+Accounts&body=Hello,+I'm+interested+in+your+Bleach+Brave+Souls+accounts/services&fs=1&tf=cm" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=905075638741&text=Hello%2C+I'm+interested+in+your+Bleach+Brave+Souls+accounts%2Fservices&type=phone_number&app_absent=0" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+                   <!-- Payment Methods Section -->
+            <div class="footer-payment-section">
+                <div class="payment-section-title">Accepted Payment Methods</div>
+                <div class="footer-payment-methods">
+                    <div class="footer-payment-method">
+                        <img src="Paypal.png" alt="PayPal" class="footer-payment-icon">
+                    </div>
+                    <div class="footer-payment-method">
+                        <img src="btc.png" alt="Cryptocurrency" class="footer-payment-icon">
+                    </div>
+                    <div class="footer-payment-method">
+                        <img src="bt.png" alt="Bank Transfer" class="footer-payment-icon">
+                    </div>
+                    <div class="footer-payment-method">
+                        <img src="Master.png" alt="Mastercard" class="footer-payment-icon">
+                    </div>
+                    <div class="footer-payment-method">
+                        <img src="Visa.png" alt="Visa" class="footer-payment-icon">
+                    </div>
+                </div>
+            </div>
+            
+        
+        <div class="copyright">
+            © Since 2023 BBS VOLDIGOAD. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

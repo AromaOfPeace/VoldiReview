@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS Boosting Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="nav-corner-button">
+        <a href="index.html" class="boost-nav-btn back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Main
+        </a>
+    </div>
+
+    <!-- Cart Button -->
+    <button class="cart-button" id="cartButton">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-cart" id="closeCart">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Your Order</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="cart-action-btn cart-clear-btn" id="clearCart">Clear Cart</button>
+                <button class="cart-action-btn cart-checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="boosting-header">
+        <div class="particles" id="particles"></div>
+        <div class="header-content container">
+            <h1>BBS Boosting Services</h1>
+            <p class="subtitle">Professional farming and account boosting services with guaranteed results and fast delivery</p>
+        </div>
+    </header>
+
+ 
+      <!-- Chat Bubble Button -->
+    <div class="chat-bubble" id="chatBubble">
+        <img src="skull.png" alt="Support" class="bubble-icon" />
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="header-avatar">
+                </div>
+                <div class="header-info">
+                    <h3>Account Support</h3>
+                    <p>Online now</p>
+                </div>
+                <div class="status-dot"></div>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="typing-indicator">
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Chat Input -->
+             <div class="chat-input">
+                <div class="question-selector">
+                    <button class="select-button">Select a question here</button>
+                    <div class="question-dropdown">
+                        <div class="question-option" data-question="buy">How can I buy an account?</div>
+                        <div class="question-option" data-question="sell">How can I sell my account?</div>
+                        <div class="question-option" data-question="payment">What payment methods do you accept?</div>
+                        <div class="question-option" data-question="delivery">How long does delivery take?</div>
+                        <div class="question-option" data-question="response">How fast do sellers respond?</div>
+                        <div class="question-option" data-question="account-delivery">How is the account delivered?</div>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text" class="message-input" placeholder="Type your message...">
+                    <button class="send-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                            <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    <main class="container boosting-container">
+        <!-- Point Event Section -->
+  <section class="service-section">
+    <h2><i class="fas fa-star"></i> Point Event Boosting</h2>
+    <div class="point-calculator">
+        <div class="calculator-controls">
+            <div class="control-group">
+                <label for="point-amount">Select Target Points:</label>
+                <select id="point-amount" class="service-select">
+                    <option value="250000000">250,000,000 points</option>
+                    <option value="500000000">500,000,000 points</option>
+                    <option value="1000000000">1,000,000,000 points</option>
+                    <option value="2000000000">2,000,000,000 points</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="point-quantity">Accounts:</label>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="point-decrease">-</button>
+                    <input type="number" id="point-quantity" class="quantity-input" min="1" value="1">
+                    <button class="quantity-btn" id="point-increase">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="calculator-results">
+            <div class="result-box">
+                <span class="result-label">Total Price</span>
+                <span id="point-price" class="result-value">$15.00</span>
+            </div>
+            <div class="result-box">
+                <span class="result-label">BBS Summoning Tickets</span>
+                <div class="ticket-display">
+                    <img src="tick.png" alt="Ticket" class="ticket-icon">
+                    <span id="point-tickets" class="result-value">1,500</span>
+                </div>
+            </div>
+        </div>
+        <button class="order-btn big-btn" id="addPointEvent">Add to Cart</button>
+    </div>
+</section>
+
+<!-- Story Farming Section -->
+<section class="service-section">
+    <h2><i class="fas fa-book"></i> Story Farming</h2>
+    
+    <!-- Entire Story Container -->
+    <div class="story-container">
+        <div class="story-header">
+            <h3>Entire Story Package</h3>
+            <div class="story-price">$10</div>
+        </div>
+        <div class="story-content">
+            <div class="story-description">
+                <p>Complete all story content including main story and sidestories in all difficulties</p>
+                <ul class="story-features">
+                    <li> Main Story (Normal + Hard Modes)</li>
+                    <li>Sidestories (Normal + Hard Modes)</li>
+                    <li>Guaranteed in less than 12 hours</li>
+                </ul>
+            </div>
+            <div class="story-options">
+                <div class="story-option">
+                    <h4>Main Story Only</h4>
+                    <div class="option-price">$6</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease">-</button>
+                        <input type="number" class="quantity-input" min="1" value="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                    <button class="order-btn" data-service="Main Story Completion" data-price="6">Add to Cart</button>
+                </div>
+                <div class="story-option">
+                    <h4>Sidestory Only</h4>
+                    <div class="option-price">$7</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease">-</button>
+                        <input type="number" class="quantity-input" min="1" value="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                    <button class="order-btn" data-service="Sidestory Completion" data-price="7">Add to Cart</button>
+                </div>
+                <div class="story-option featured">
+                    <h4>Complete Package</h4>
+                    <div class="option-price">$10</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease">-</button>
+                        <input type="number" class="quantity-input" min="1" value="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                    <button class="order-btn" data-service="Entire Story Package" data-price="10">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Substory Completion Container -->
+    <div class="story-container">
+        <div class="story-header">
+            <h3>Substory Completion</h3>
+            <div class="story-price">$13</div>
+        </div>
+        <div class="story-content">
+            <div class="story-description">
+                <p>Complete all substories with orb collection and character upgrades</p>
+                <ul class="story-features">
+                    <li>All substories completed</li>
+                    <li>All orbs collected</li>
+                    <li>4★ characters maxed</li>
+                    <li>Guaranteed in less than 24 hours</li>
+                </ul>
+            </div>
+            <div class="story-options">
+                <div class="story-option">
+                    <h4>Substory Only</h4>
+                    <div class="option-price">$7</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease">-</button>
+                        <input type="number" class="quantity-input" min="1" value="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                    <button class="order-btn" data-service="Substory Only" data-price="7">Add to Cart</button>
+                </div>
+                <div class="story-option">
+                    <h4>Substory + Maxed 4★ Orbs</h4>
+                    <div class="option-price">$7</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease">-</button>
+                        <input type="number" class="quantity-input" min="1" value="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                    <button class="order-btn" data-service="Substory + Maxed 4★ Orbs" data-price="7">Add to Cart</button>
+                </div>
+                <div class="story-option featured">
+                    <h4>Complete Package</h4>
+                    <div class="option-price">$13</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease">-</button>
+                        <input type="number" class="quantity-input" min="1" value="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                    <button class="order-btn" data-service="Advanced Substory Package" data-price="13">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- All Story Modes Container -->
+    <div class="story-container premium">
+        <div class="story-header">
+            <h3>ALL STORY MODES</h3>
+            <div class="story-price">$20</div>
+        </div>
+        <div class="story-content">
+            <div class="story-description">
+                <p>The ultimate package including all story content and substory completion</p>
+                <ul class="story-features">
+                    <li>ALL story modes in all difficulties</li>
+                    <li>ALL substories completed</li>
+                    <li>4★ characters maxed</li>
+                    <li>All orbs collected</li>
+                    <li>Priority completion (12 hours)</li>
+                </ul>
+            </div>
+            <div class="story-cta">
+                <div class="quantity-selector">
+                    <button class="quantity-btn decrease">-</button>
+                    <input type="number" class="quantity-input" min="1" value="1">
+                    <button class="quantity-btn increase">+</button>
+                </div>
+                <button class="order-btn premium-btn" data-service="Complete Story & Substory" data-price="20">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-section">
+    <h2><i class="fas fa-link"></i> Link Slot Farming</h2>
+    <div class="link-slot-calculator">
+        
+        <!-- Enhanced Potion Type Selector -->
+        <div class="potion-type-container">
+            <label class="potion-type-label">Select Potion Type:</label>
+            <div class="potion-type-selector">
+                <div class="potion-type-option active" data-type="normal" onclick="selectPotionType('normal')">
+                    <div class="potion-type-icon" style="background-image: url('normal.png')"></div>
+                    <div class="type-name">Normal Potions</div>
+                    <div class="type-description">Standard link slot potions</div>
+                </div>
+                <div class="potion-type-option" data-type="super" onclick="selectPotionType('super')">
+                    <div class="potion-type-icon" style="background-image: url('super.png')"></div>
+                    <div class="type-name">Super Potions</div>
+                    <div class="type-description">Enhanced link slot potions</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Element Grid -->
+        <div class="element-container">
+            <label class="element-label">Select Element:</label>
+            <div class="element-grid">
+                <div class="element-option active" data-element="power" onclick="selectElement('power')">
+                    <div class="element-icon" data-normal="redno.png" data-super="reds.png"></div>
+                    <div class="element-name">Power</div>
+                </div>
+                <div class="element-option" data-element="speed" onclick="selectElement('speed')">
+                    <div class="element-icon" data-normal="blueno.png" data-super="blues.png"></div>
+                    <div class="element-name">Speed</div>
+                </div>
+                <div class="element-option" data-element="tech" onclick="selectElement('tech')">
+                    <div class="element-icon" data-normal="greenno.png" data-super="greens.png"></div>
+                    <div class="element-name">Technique</div>
+                </div>
+                <div class="element-option" data-element="heart" onclick="selectElement('heart')">
+                    <div class="element-icon" data-normal="purpleno.png" data-super="purples.png"></div>
+                    <div class="element-name">Heart</div>
+                </div>
+                <div class="element-option" data-element="mind" onclick="selectElement('mind')">
+                    <div class="element-icon" data-normal="orangeno.png" data-super="oranges.png"></div>
+                    <div class="element-name">Mind</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selected Potion Preview -->
+        <div class="selected-potion-preview">
+            <div class="preview-title">Selected Potion:</div>
+            <div class="preview-display">
+                <div class="preview-icon" id="selectedPotionIcon"></div>
+                <div class="preview-info">
+                    <div class="preview-name" id="selectedPotionName">Normal Power Potion</div>
+                    <div class="preview-type" id="selectedPotionType">Normal • Power Element</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amount and Quantity Controls -->
+        <div class="calculator-controls">
+            <div class="control-group">
+                <label for="potion-amount">Amount of Potions:</label>
+                <select id="potion-amount" class="service-select">
+                    <option value="50000">50,000 potions</option>
+                    <option value="100000">100,000 potions</option>
+                    <option value="150000">150,000 potions</option>
+                    <option value="200000">200,000 potions</option>
+                    <option value="250000">250,000 potions</option>
+                    <option value="300000">300,000 potions</option>
+                    <option value="350000">350,000 potions</option>
+                    <option value="400000">400,000 potions</option>
+                    <option value="450000">450,000 potions</option>
+                    <option value="500000">500,000 potions</option>
+                </select>
+            </div>
+            </div>
+            <div class="control-group">
+                <label for="potion-quantity">Accounts:</label>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="potion-decrease">-</button>
+                    <input type="number" id="potion-quantity" class="quantity-input" min="1" value="1">
+                    <button class="quantity-btn" id="potion-increase">+</button>
+                </div>
+                 <div class="result-box">
+                <span class="result-label">Total Price</span>
+                <span id="link-price" class="result-value">$1.50</span>
+            </div>
+    </div>
+        //
+        <button class="order-btn big-btn" id="addLinkSlot">Add to Cart</button>
+    </div>
+            </div>
+
+</section>
+
+<!-- Senkaimon Completion Section (centered and improved) -->
+<section class="service-section">
+    <h2><i class="fas fa-tower"></i> Senkaimon Completion</h2>
+    
+    <!-- Centered container for the service option -->
+    <div class="senkaimon-centered-container">
+        <div class="service-option senkaimon-card">
+            <!-- Senkaimon Image at the top -->
+            <div class="senkaimon-image-container">
+                <img src="senk.png" alt="Senkaimon Quests" class="senkaimon-image">
+            </div>
+            
+            
+            <ul class="service-features">
+                <li>All floors completed</li>
+                <li>All rewards claimed</li>
+                <li>Maximum progression achieved</li>
+                <li>Guaranteed within 24 hours</li>
+            </ul>
+            <div class="option-price">$9</div>
+            
+            <div class="quantity-selector">
+                <button class="quantity-btn decrease">-</button>
+                <input type="number" class="quantity-input" min="1" value="1">
+                <button class="quantity-btn increase">+</button>
+            </div>
+            
+            <button class="order-btn add-to-cart" data-service="Senkaimon Completion" data-price="9">Add to Cart</button>
+        </div>
+    </div>
+</section>
+<!-- Epic Raids Section (separate) -->
+<section class="service-section">
+    <h2><i class="fas fa-medal"></i> Epic Raids</h2>
+    <div class="point-calculator">
+        <div class="calculator-controls">
+            <div class="control-group">
+                <label for="medal-amount">Medal Amount:</label>
+                <select id="medal-amount" class="service-select">
+                    <option value="50000">50,000 medals</option>
+                    <option value="100000">100,000 medals</option>
+                    <option value="200000">200,000 medals</option>
+                    <option value="300000">300,000 medals</option>
+                    <option value="500000">500,000 medals</option>
+                    <option value="1000000">1,000,000 medals</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="epic-quantity">Accounts:</label>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="epic-decrease">-</button>
+                    <input type="number" id="epic-quantity" class="quantity-input" min="1" value="1">
+                    <button class="quantity-btn" id="epic-increase">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="calculator-results">
+            <div class="result-box">
+                <span class="result-label">Total Price</span>
+                <span id="epic-price" class="result-value">$5.00</span>
+            </div>
+            <div class="result-box">
+                <span class="result-label">Epic Raid Medals</span>
+                <div class="medal-display">
+                    <img src="med1.png" alt="Medal 1" class="medal-icon">
+                    <img src="med2.png" alt="Medal 2" class="medal-icon">
+                    <span id="epic-medals" class="result-value">50,000</span>
+                </div>
+            </div>
+        </div>
+        <button class="order-btn big-btn" id="addEpicRaids">Add to Cart</button>
+    </div>
+</section>
+
+        <!-- Custom Service Section -->
+        <section class="service-section">
+            <h2><i class="fas fa-cogs"></i> Custom Service</h2>
+            <div class="custom-service">
+                <div class="calculator-controls">
+                    <div class="control-group">
+                        <label for="custom-service-desc">Describe what you need:</label>
+                        <textarea id="custom-service-desc" class="custom-service-input" rows="3" placeholder="Enter details about the custom service you require..."></textarea>
+                    </div>
+                    <div class="control-group">
+                        <label for="custom-service-price">Price (USD):</label>
+                        <input type="number" id="custom-service-price" class="custom-service-input" min="1" step="0.01" placeholder="Enter price...">
+                    </div>
+                    <div class="control-group">
+                        <label for="custom-quantity">Accounts:</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" id="custom-decrease">-</button>
+                            <input type="number" id="custom-quantity" class="quantity-input" min="1" value="1">
+                            <button class="quantity-btn" id="custom-increase">+</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="order-btn big-btn" id="addCustomService">Send Request</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animated-footer">
+    <div class="footer-lights"></div>
+    <div class="footer-gradient">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://wa.me/yournumber" target="_blank" class="footer-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.epicnpc.com/" target="_blank" class="footer-link epicnpc">
+                    <i class="fas fa-store"></i>
+                    <span>EpicNPC</span>
+                </a>
+                <a href="https://discord.gg/yourinvite" target="_blank" class="footer-link discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" class="footer-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/yourpage" target="_blank" class="footer-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="mailto:youremail@gmail.com" class="footer-link gmail">
+                    <i class="fas fa-envelope"></i>
+                    <span>Gmail</span>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>© Since 2023 BBS VOLDIGOAD. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
