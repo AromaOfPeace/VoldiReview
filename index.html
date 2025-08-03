@@ -12,38 +12,40 @@
 </head>
 <body>
 
+    <!-- Loading Screen HTML (add this to your HTML) -->
+<div id="loading-screen" class="loading-screen">
+    <video id="loading-video" autoplay muted loop>
+        <source src="Loading.mp4" type="video/mp4">
+    </video>
+    <button id="skip-loading" class="skip-button">
+        Skip <i class="fas fa-forward"></i>
+    </button>
+</div>
+
     <!-- Theme Toggle -->
     <div class="theme-toggle" id="themeToggle">
         <i class="fas fa-sun theme-icon sun"></i>
         <i class="fas fa-moon theme-icon moon"></i>
     </div>
-    
-  <!-- Loading Screen -->
-<div id="loading-screen">
-  <video id="loading-video" autoplay muted loop playsinline>
-    <source src="Loading.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-<div class="nav-buttons-container">
-    <div class="nav-corner-button">
-        <a href="boosting.html" class="boost-nav-btn">
-            <i class="fas fa-bolt"></i> Farming/Boosting
-        </a>
-    </div>
-    
-            <div class="nav-corner-button">
-                <button class="sell-nav-btn" id="sellAccountBtn">
-                    <i class="fas fa-dollar-sign"></i> Sell Your Account
-                </button>
-            </div>
+
+    <div class="nav-buttons-container">
+        <div class="nav-corner-button">
+            <a href="boosting.html" class="boost-nav-btn">
+                <i class="fas fa-bolt"></i> Farming/Boosting
+            </a>
+        </div>
+        
+        <div class="nav-corner-button">
+            <button class="sell-nav-btn" id="sellAccountBtn">
+                <i class="fas fa-dollar-sign"></i> Sell Your Account
+            </button>
         </div>
     </div>
 
-    <!-- Enhanced Sell Account Popup Modal -->
+    <!-- Sell Account Popup Modal -->
     <div class="popup-overlay" id="sellAccountPopup">
         <div class="popup-content">
-            <span class="close-popup" id="closePopup">&times;</span>
+            <span class="close-popup" id="closeSellPopup">&times;</span>
             <h2>Sell Your Account</h2>
             <p class="popup-subtitle">Sell your Account using the Platform of your Choice</p>
             
@@ -87,66 +89,66 @@
         </div>
     </div>
 
-
-
     <header>
-     <div class="particles" id="particles"></div>
+        <div class="particles" id="particles"></div>
         <div class="header-content container">
             <h1>BBS VOLDIGOAD MARKET</h1>
             <p class="subtitle">Find the perfect Bleach Brave Souls account with specific cards you want</p>
-            <!-- Buy Here Popup Trigger -->
-   <a href="#" class="btn pulse" id="buyHereBtn">
-        <i class="fas fa-shopping-cart"></i>
-        Buy Here
-    </a>
-
-    <!-- Enhanced Buy Here Popup Modal -->
-    <div class="popup-overlay" id="buyHerePopup">
-        <div class="popup-content">
-            <span class="close-popup" id="closePopup">&times;</span>
-            <h2>The Choice is Yours</h2>
-            <p class="popup-subtitle">Send your Account Number via the desired Platform</p>
             
-            <div class="social-links">
-                <a href="https://www.epicnpc.com/members/voldigoad.1579253/" 
-                   class="social-link epicnpc" target="_blank">
-                    <i class="fas fa-store"></i>
-                    <span>EpicNPC</span>
-                </a>
-                
-                <a href="https://discord.com/users/1046773939843645503" 
-                   class="social-link discord" target="_blank">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord</span>
-                </a>
-                
-                <a href="https://www.instagram.com/bbsvoldigoadd/" 
-                   class="social-link instagram" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                
-                <a href="https://mail.google.com/mail/u/0/?to=voldigoadzeref@gmail.com&su=Interested+in+BBS+Accounts&body=Hello,+I'm+interested+in+your+Bleach+Brave+Souls+accounts/services&fs=1&tf=cm" 
-                   class="social-link email">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-                
-                <a href="https://api.whatsapp.com/send/?phone=905075638741&text=Hello%2C+I'm+interested+in+your+Bleach+Brave+Souls+accounts%2Fservices&type=phone_number&app_absent=0" 
-                   class="social-link whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="https://www.facebook.com/bbsvoldigoadd" 
-                   class="social-link facebook" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                    <span>Facebook</span>
-                </a>
+            <!-- Buy Here Popup Trigger -->
+            <a href="#" class="btn pulse" id="buyHereBtn">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Here
+            </a>
+
+            <!-- Buy Here Popup Modal -->
+            <div class="popup-overlay" id="buyHerePopup">
+                <div class="popup-content">
+                    <span class="close-popup" id="closeBuyPopup">&times;</span>
+                    <h2>The Choice is Yours</h2>
+                    <p class="popup-subtitle">Send your Account Number via the desired Platform</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.epicnpc.com/members/voldigoad.1579253/" 
+                           class="social-link epicnpc" target="_blank">
+                            <i class="fas fa-store"></i>
+                            <span>EpicNPC</span>
+                        </a>
+                        
+                        <a href="https://discord.com/users/1046773939843645503" 
+                           class="social-link discord" target="_blank">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/bbsvoldigoadd/" 
+                           class="social-link instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        
+                        <a href="https://mail.google.com/mail/u/0/?to=voldigoadzeref@gmail.com&su=Interested+in+BBS+Accounts&body=Hello,+I'm+interested+in+your+Bleach+Brave+Souls+accounts/services&fs=1&tf=cm" 
+                           class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        
+                        <a href="https://api.whatsapp.com/send/?phone=905075638741&text=Hello%2C+I'm+interested+in+your+Bleach+Brave+Souls+accounts%2Fservices&type=phone_number&app_absent=0" 
+                           class="social-link whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/bbsvoldigoadd" 
+                           class="social-link facebook" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     </header>
-
 
       <!-- Chat Bubble Button -->
     <div class="chat-bubble" id="chatBubble">
@@ -295,3 +297,5 @@
 </body>
 
 </html>
+</html>
+
