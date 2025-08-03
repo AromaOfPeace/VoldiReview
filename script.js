@@ -1,4 +1,4 @@
-// Theme Toggle Functionality
+// Theme Toggle Functionality (keep this part as is)
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
@@ -16,31 +16,110 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
 });
 
-let pageLoaded = false;
-let minTimeReached = false;
-let soundEnabled = false;
-const video = document.getElementById('loading-video');
-
-// Create skip button for loading screen
-const skipButton = document.createElement('button');
-skipButton.id = 'skip-loading';
-skipButton.innerHTML = 'Skip <i class="fas fa-forward"></i>';
-skipButton.addEventListener('click', () => {
-    hideLoadingScreen();
-});
-document.body.appendChild(skipButton);
-
-// Enable sound after user interaction (required by browser policies)
-function enableSound() {
-    if (!soundEnabled && video) {
-        soundEnabled = true;
-        video.muted = false;
-        video.play().catch(err => {
-            console.log("Play with sound failed:", err);
+// Loading Screen Functionality - FIXED VERSION
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const video = document.getElementById('loading-video');
+    const skipButton = document.getElementById('skip-loading');
+    
+    // Create skip button if it doesn't exist
+    if (!skipButton) {
+        const newSkipButton = document.createElement('button');
+        newSkipButton.id = 'skip-loading';
+        newSkipButton.innerHTML = 'Skip <i class="fas fa-forward"></i>';
+        document.body.appendChild(newSkipButton);
+    }
+    
+    // Ensure elements exist
+    if (!loadingScreen || !video) {
+        console.error("Loading screen elements missing");
+        document.body.classList.add('loaded');
+        return;
+    }
+    
+    // Check if returning from boosting.html
+    if (sessionStorage.getItem('returningFromBoosting')) {
+        hideLoadingScreen();
+        sessionStorage.removeItem('returningFromBoosting');
+        return;
+    }
+    
+    // Set up skip button
+    document.getElementById('skip-loading').addEventListener('click', hideLoadingScreen);
+    
+    // Show loading screen
+    loadingScreen.style.display = 'flex';
+    document.getElementById('skip-loading').style.display = 'block';
+    
+    // Video handling
+    video.muted = true; // Start muted to avoid autoplay issues
+    const playPromise = video.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log("Video play failed, continuing without video");
+            video.style.display = 'none';
         });
+    }
+    
+    // Set minimum loading time (7.55 seconds)
+    const minLoadTime = setTimeout(() => {
+        minTimeReached = true;
+        checkLoadingComplete();
+    }, 7550);
+    
+    // Set up page loaded check
+    window.addEventListener('load', () => {
+        pageLoaded = true;
+        checkLoadingComplete();
+    });
+    
+    // Enable sound on interaction
+    document.addEventListener('click', enableSound);
+    
+    let pageLoaded = false;
+    let minTimeReached = false;
+    let soundEnabled = false;
+    
+    function enableSound() {
+        if (!soundEnabled && video) {
+            soundEnabled = true;
+            video.muted = false;
+            video.play().catch(err => {
+                console.log("Play with sound failed:", err);
+            });
+            document.removeEventListener('click', enableSound);
+        }
+    }
+    
+    function checkLoadingComplete() {
+        if (pageLoaded && minTimeReached) {
+            hideLoadingScreen();
+            clearTimeout(minLoadTime);
+        }
+    }
+    
+    function hideLoadingScreen() {
+        document.body.classList.add('loaded');
+        
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+        
+        if (loadingScreen) {
+            loadingScreen.style.display = 'none';
+        }
+        
+        const skipBtn = document.getElementById('skip-loading');
+        if (skipBtn) {
+            skipBtn.style.display = 'none';
+        }
+        
         document.removeEventListener('click', enableSound);
     }
-}
+});
+
 
 // ====== [1] Prevent Loading Screen on Back Navigation ======
 document.addEventListener('DOMContentLoaded', function() {
@@ -176,16 +255,16 @@ const accounts = [
         orbs: 5000, 
         links: ["https://i.imgur.com/abc123.jpg", "https://i.imgur.com/def456.jpg"],
         cards: [1, 3, 10],
-        tags: ["new"]
+        tags: ["new", "top-tier"]
     },
     { 
         id: 2, 
         code: "BBS-002", 
         category: "farmed", 
-        orbs: 2500, 
-        links: ["https://i.imgur.com/ghi789.jpg"],
-        cards: [2, 5, 8],
-        tags: ["top-tier"]
+        orbs: 38125, 
+        links: ["https://imgur.com/a/G4FSssU"],
+        cards: [3, 2, 4, 19, 18, 24, 25,23,26,29],
+        tags: ["new", "top-tier"]
     },
     { 
         id: 3, 
@@ -203,7 +282,7 @@ const accounts = [
         orbs: 4500, 
         links: ["https://i.imgur.com/pqr678.jpg"],
         cards: [1, 7],
-        tags: ["new"]
+        tags: ["new", "top-tier"]
     },
     { 
         id: 5, 
@@ -212,7 +291,7 @@ const accounts = [
         orbs: 3500, 
         links: ["https://i.imgur.com/stu901.jpg", "https://i.imgur.com/vwx234.jpg"],
         cards: [2, 6, 9],
-        tags: ["top-tier"]
+        tags: ["new", "top-tier"]
     },
     { 
         id: 6, 
@@ -773,114 +852,86 @@ const keywordMap = {
         }
     });
 });
+       // POPUP FUNCTIONALITY - FIXED VERSION
+        document.addEventListener('DOMContentLoaded', function() {
+            // Buy Here Popup
+            const buyBtn = document.getElementById('buyHereBtn');
+            const buyPopup = document.getElementById('buyHerePopup');
+            const closeBuyBtn = document.getElementById('closeBuyPopup');
 
-// Enhanced JavaScript with smooth animations
-const buyBtn = document.getElementById('buyHereBtn');
-const popup = document.getElementById('buyHerePopup');
-const closeBtn = document.getElementById('closePopup');
+            // Sell Account Popup  
+            const sellBtn = document.getElementById('sellAccountBtn');
+            const sellPopup = document.getElementById('sellAccountPopup');
+            const closeSellBtn = document.getElementById('closeSellPopup');
 
-buyBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    popup.style.display = 'flex';
-    // Trigger animation after display is set
-    setTimeout(() => {
-        popup.classList.add('show');
-    }, 10);
-});
+            // Buy Here Popup Events
+            if (buyBtn && buyPopup && closeBuyBtn) {
+                buyBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openPopup(buyPopup);
+                });
 
-closeBtn.addEventListener('click', function() {
-    closePopup();
-});
+                closeBuyBtn.addEventListener('click', function() {
+                    closePopup(buyPopup);
+                });
 
-window.addEventListener('click', function(event) {
-    if (event.target === popup) {
-        closePopup();
-    }
-});
-
-function closePopup() {
-    popup.classList.remove('show');
-    setTimeout(() => {
-        popup.style.display = 'none';
-    }, 300);
-}
-
-// Add keyboard support
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && popup.classList.contains('show')) {
-        closePopup();
-    }
-});
-
-// Add subtle hover effects to social links
-document.querySelectorAll('.social-link').forEach(link => {
-    link.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-4px) scale(1.02)';
-    });
-    
-    link.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
-    const sellAccountBtn = document.getElementById('sellAccountBtn');
-    const sellAccountPopup = document.getElementById('sellAccountPopup');
-    const closePopup = document.getElementById('closePopup');
-
-    // Open popup when button is clicked
-    if (sellAccountBtn) {
-        sellAccountBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Button clicked!'); // Debug
-            if (sellAccountPopup) {
-                sellAccountPopup.style.display = 'flex';
-                // Small delay to trigger animation
-                setTimeout(() => {
-                    sellAccountPopup.classList.add('show');
-                }, 10);
+                buyPopup.addEventListener('click', function(e) {
+                    if (e.target === buyPopup) {
+                        closePopup(buyPopup);
+                    }
+                });
             }
-        });
-    }
 
-    // Close popup when X is clicked
-    if (closePopup) {
-        closePopup.addEventListener('click', function() {
-            console.log('Close button clicked!'); // Debug
-            closeSellPopup();
-        });
-    }
+            // Sell Account Popup Events
+            if (sellBtn && sellPopup && closeSellBtn) {
+                sellBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openPopup(sellPopup);
+                });
 
-    // Close popup when clicking outside the content
-    if (sellAccountPopup) {
-        sellAccountPopup.addEventListener('click', function(e) {
-            if (e.target === sellAccountPopup) {
-                console.log('Clicked outside popup!'); // Debug
-                closeSellPopup();
+                closeSellBtn.addEventListener('click', function() {
+                    closePopup(sellPopup);
+                });
+
+                sellPopup.addEventListener('click', function(e) {
+                    if (e.target === sellPopup) {
+                        closePopup(sellPopup);
+                    }
+                });
             }
+
+            // Global escape key handler
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closePopup(buyPopup);
+                    closePopup(sellPopup);
+                }
+            });
+
+            // Popup helper functions
+            function openPopup(popup) {
+                if (popup) {
+                    popup.style.display = 'flex';
+                    setTimeout(() => {
+                        popup.classList.add('show');
+                    }, 10);
+                }
+            }
+
+            function closePopup(popup) {
+                if (popup && popup.classList.contains('show')) {
+                    popup.classList.remove('show');
+                    setTimeout(() => {
+                        popup.style.display = 'none';
+                    }, 300);
+                }
+            }
+
+            // Initialize everything
+            createParticles();
+            setupCategoryTabs();
+            renderAccounts();
         });
-    }
-
-    // Close popup with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && sellAccountPopup && sellAccountPopup.classList.contains('show')) {
-            console.log('Escape pressed!'); // Debug
-            closeSellPopup();
-        }
-    });
-
-    // Close popup function
-    function closeSellPopup() {
-        if (sellAccountPopup) {
-            sellAccountPopup.classList.remove('show');
-            setTimeout(() => {
-                sellAccountPopup.style.display = 'none';
-            }, 300);
-        }
-    }
-});
 
 // Initialize the page
 init();
