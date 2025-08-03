@@ -734,7 +734,7 @@ const keywordMap = {
         messageDiv.innerHTML = `
             <div class="message-avatar">
                 ${sender === 'bot' ? `
-                    <img src="skull.png" alt="Support" class="skull-icon" />
+                    <img src="skull.PNG" alt="Support" class="skull-icon" />
                 ` : `
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -883,4 +883,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Initialize the page
+
 init();
