@@ -230,78 +230,145 @@ const allCards = [
     { id: 14, name: "Ururu", image: "Ururu.png", tags: ["new"] },
     { id: 15, name: "Kon", image: "Kon.png", tags: ["new"] },
     { id: 16, name: "Askin", image: "Askin.png", tags: ["new"] },
-    { id: 17, name: "Äs Nödt", image: "As.png", tags: ["new"] },
-    { id: 18, name: "Ulquiorra", image: "Ulquiorra.png", tags: ["new", "top-tier"]},
-    { id: 19, name: "Ichigo Kurosaki", image: "Ichigo.png", tags: ["new", "top-tier"]},
-    { id: 20, name: "Emilou", image: "Emilou.png", tags: ["new"] },
-    { id: 21, name: "Franceska", image: "Franceska.png", tags: ["new"] },
-    { id: 22, name: "Cyan", image: "Cyan.png", tags: ["new"] },
-    { id: 23, name: "Askin", image: "AskinBlood War.png", tags: ["top-tier"] },
-    { id: 24, name: "Senjumaru", image: "Senjumaru.png", tags: ["top-tier"] },
-    { id: 25, name: "Ichigo", image: "Ichigo2025.png", tags: ["top-tier"] },
-    { id: 26, name: "Kenpachi", image: "Kenpachi.png", tags: ["top-tier"] },
-    { id: 27, name: "Gremmy", image: "Gremmy.png", tags: ["top-tier"] },
-    { id: 28, name: "Yhwach", image: "Yhwach 2024.png", tags: ["top-tier"] },
-    { id: 29, name: "Orihime", image: "Orihime.png", tags: ["top-tier"] },
-    { id: 30, name: "Ichigo", image: "Ichigo 2024.png", tags: ["top-tier"] },
+    { id: 17, name: "Giselle", image: "Giselle.png", tags: ["new"] },
+    { id: 18, name: "Äs Nödt", image: "As.png", tags: ["new"] },
+    { id: 19, name: "Ulquiorra", image: "Ulquiorra.png", tags: ["new", "top-tier"]},
+    { id: 20, name: "Ichigo Kurosaki", image: "Ichigo.png", tags: ["new", "top-tier"]},
+    { id: 21, name: "Emilou", image: "Emilou.png", tags: ["new"] },
+    { id: 22, name: "Franceska", image: "Franceska.png", tags: ["new"] },
+    { id: 23, name: "Cyan", image: "Cyan.png", tags: ["new"] },
+    { id: 24, name: "Askin", image: "AskinBlood War.png", tags: ["top-tier"] },
+    { id: 25, name: "Senjumaru", image: "Senjumaru.png", tags: ["top-tier"] },
+    { id: 26, name: "Ichigo", image: "Ichigo2025.png", tags: ["top-tier"] },
+    { id: 27, name: "Kenpachi", image: "Kenpachi.png", tags: ["top-tier"] },
+    { id: 28, name: "Gremmy", image: "Gremmy.png", tags: ["top-tier"] },
+    { id: 29, name: "Ichigo", image: "ichigo 9.png", tags: ["top-tier"] },
+    { id: 30, name: "Yhwach", image: "Yhwach 2024.png", tags: ["top-tier"] },
+    { id: 31, name: "Orihime", image: "Orihime.png", tags: ["top-tier"] },
+    { id: 32, name: "Ichigo", image: "Ichigo 2024.png", tags: ["top-tier"] },
 ];
 
-// Sample data for accounts
+// data for accounts
 const accounts = [
+
+    // Fresh accounts with high orbs and multiple cards
     { 
         id: 1, 
-        code: "BBS-001", 
+        code: "BBS-1150", 
         category: "fresh", 
-        orbs: 5000, 
-        links: ["https://i.imgur.com/abc123.jpg", "https://i.imgur.com/def456.jpg"],
-        cards: [1, 3, 10],
+        orbs: 38459, 
+        links: ["https://imgur.com/a/7shYlB2"],
+        cards: [1,3,5,11,13,14,15,20,27,28,29],
         tags: ["new", "top-tier"]
     },
+    // Fresh accounts with high orbs and multiple cards
     { 
         id: 2, 
-        code: "BBS-002", 
-        category: "farmed", 
-        orbs: 38125, 
-        links: ["https://imgur.com/a/G4FSssU"],
-        cards: [3, 2, 4, 19, 18, 24, 25,23,26,29],
+        code: "BBS-1151", 
+        category: "fresh", 
+        orbs: 31560, 
+        links: ["https://imgur.com/a/QAY7ABz"],
+        cards: [1,2,3,5,16,17,27,28,29,31,32],
         tags: ["new", "top-tier"]
     },
+     { 
+        id: 3, 
+        code: "BBS-1152", 
+        category: "fresh", 
+        orbs: 30102, 
+        links: ["https://imgur.com/a/RrK5Sbd"],
+        cards: [1,2,4,5,11,12,14,19,20,27,28,29,31,32],
+        tags: ["new", "top-tier"]
+    },
+
+    // Farmed accounts with moderate orbs and multiple cards
+
     { 
         id: 3, 
-        code: "BBS-003", 
-        category: "endgame", 
-        orbs: 1000, 
-        links: ["https://i.imgur.com/jkl012.jpg", "https://i.imgur.com/mno345.jpg"],
-        cards: [1, 2, 5, 6, 8],
-        tags: ["new", "top-tier"]
-    },
-    { 
-        id: 4, 
-        code: "BBS-004", 
-        category: "fresh", 
-        orbs: 4500, 
-        links: ["https://i.imgur.com/pqr678.jpg"],
-        cards: [1, 7],
-        tags: ["new", "top-tier"]
-    },
-    { 
-        id: 5, 
-        code: "BBS-005", 
+        code: "BBS-1122", 
         category: "farmed", 
-        orbs: 3500, 
-        links: ["https://i.imgur.com/stu901.jpg", "https://i.imgur.com/vwx234.jpg"],
-        cards: [2, 6, 9],
+        orbs: 38155, 
+        links: ["https://imgur.com/a/G4FSssU"],
+        cards: [3, 2, 4, 19, 20, 24, 26, 25, 27, 31],
         tags: ["new", "top-tier"]
     },
-    { 
-        id: 6, 
-        code: "BBS-006", 
-        category: "endgame", 
-        orbs: 800, 
-        links: ["https://i.imgur.com/yzA567.jpg"],
-        cards: [4, 5, 8],
+        { 
+        id: 5, 
+        code: "BBS-1120", 
+        category: "farmed", 
+        orbs: 47019, 
+        links: ["https://imgur.com/a/NI9hR44"],
+        cards: [2, 3, 4, 19, 28, 29, 11, 13, 14, 15, 32],
         tags: ["new", "top-tier"]
-    }
+    },
+        { 
+        id: 6, 
+        code: "BBS-1137", 
+        category: "farmed", 
+        orbs: 19388, 
+        links: ["https://imgur.com/a/ZZKk3kS"],
+        cards: [1,2,3,4,19,20,24,25,26,28,27,29,30,31,32],
+        tags: ["new", "top-tier"]
+    },
+     { 
+        id: 7, 
+        code: "BBS-1140", 
+        category: "farmed", 
+        orbs: 43677, 
+        links: ["https://imgur.com/a/UhZgJas"],
+        cards: [1,2,3,4,11,12,13, 27, 29, 31, 32],
+        tags: ["new", "top-tier"]
+    },
+           { 
+        id: 12, 
+        code: "BBS-1125", 
+        category: "farmed", 
+        orbs: 80248, 
+        links: ["https://imgur.com/a/ipXgx65"],
+        cards: [1,2,3,5,9,10,15,19,27,28,29,31,32],
+        tags: ["new", "top-tier"]
+    },
+
+
+
+    // Endgame accounts with high orbs and multiple cards
+   
+    { 
+        id: 8, 
+        code: "BBS-1132", 
+        category: "endgame", 
+        orbs: 20390, 
+        links: ["https://imgur.com/a/lfbvJnz"],
+        cards: [4,5,9,10,11,12,13,14,15,20,27,28,29],
+        tags: ["new", "top-tier"]
+    },
+    {
+        id: 9, 
+        code: "BBS-1128", 
+        category: "endgame", 
+        orbs: 6055, 
+        links: ["https://imgur.com/a/6ZYk4iQ"],
+        cards: [1,2,3,4,5,6,7,8,10,14,15,19,20,21,22,23,24,25,26,28,27,29,30,31,32],
+        tags: ["new", "top-tier"]
+    },
+        { 
+        id: 10, 
+        code: "BBS-1130", 
+        category: "endgame", 
+        orbs: 20220, 
+        links: ["https://imgur.com/a/sxMnM7s"],
+        cards: [1,2,3,4,5,9,10,14,15,27,28,29,31,32],
+        tags: ["new", "top-tier"]
+    },
+           { 
+        id: 11, 
+        code: "BBS-1126", 
+        category: "endgame", 
+        orbs: 3121, 
+        links: ["https://imgur.com/a/IuDUpmi"],
+        cards: [1,2,3,4,5,8,9,10,14,15,19,31,27,29],
+        tags: ["new", "top-tier"]
+     }
 ];
 
 // DOM Elements
@@ -456,13 +523,17 @@ function renderAccounts() {
         
         // Create links list
         const linksList = account.links.map(link => 
-            `<a href="${link}" class="account-link" target="_blank">View Image ${account.links.indexOf(link) + 1}</a>`
+            `<a href="${link}" class="account-link" target="_blank">View Account - CLICK HERE</a>`
         ).join(' ');
         
         // Add orb icon before the orb count
         row.innerHTML = `
-            <td><strong>${account.code}</strong></td>
-            <td>${linksList}</td>
+<td>
+    <strong class="account-code-clickable" data-code="${account.code}" title="Click to copy account code">
+        ${account.code}
+        <i class="fas fa-copy copy-icon"></i>
+    </strong>
+</td>            <td>${linksList}</td>
             <td>
                 <img src="orb.png" alt="Spirit Orbs" class="orb-icon">
                 <span class="orb-count">${account.orbs.toLocaleString()}</span>
@@ -470,7 +541,33 @@ function renderAccounts() {
         `;
         accountList.appendChild(row);
     });
-}
+    // Add event listeners for copying account codes
+document.querySelectorAll('.account-code-clickable').forEach(codeElement => {
+    codeElement.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const accountCode = this.dataset.code;
+        copyToClipboard(accountCode, this);
+    });
+    
+    // Add hover effect
+    codeElement.style.cursor = 'pointer';
+    codeElement.style.userSelect = 'none';
+    
+    codeElement.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'rgba(0, 123, 255, 0.1)';
+        this.style.borderRadius = '4px';
+        this.style.padding = '2px 4px';
+    });
+    
+    codeElement.addEventListener('mouseleave', function() {
+        if (!this.textContent.includes('Copied!')) {
+            this.style.backgroundColor = '';
+            this.style.borderRadius = '';
+            this.style.padding = '';
+        }
+    });
+});
+  }
 
 // Sort accounts based on current sort method
 function sortAccounts(accounts) {
@@ -483,6 +580,8 @@ function sortAccounts(accounts) {
     }
     
     return sorted;
+
+    
 }
 
 // Set up event listeners
@@ -935,3 +1034,86 @@ const keywordMap = {
 
 // Initialize the page
 init();
+
+
+// Copy to clipboard function with visual feedback - FIXED VERSION
+function copyToClipboard(text, element) {
+    // Prevent multiple clicks during animation
+    if (element.dataset.copying === 'true') {
+        return;
+    }
+    
+    // Set copying flag
+    element.dataset.copying = 'true';
+    
+    // Modern browsers
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            showCopyFeedback(element, 'Copied!');
+        }).catch(() => {
+            fallbackCopyToClipboard(text, element);
+        });
+    } else {
+        // Fallback for older browsers
+        fallbackCopyToClipboard(text, element);
+    }
+}
+
+// Fallback copy method for older browsers
+function fallbackCopyToClipboard(text, element) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCopyFeedback(element, 'Copied!');
+    } catch (err) {
+        showCopyFeedback(element, 'Copy failed');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// Show visual feedback when copying - FIXED VERSION
+function showCopyFeedback(element, message) {
+    // Clear any existing timeout for this element
+    if (element.copyTimeout) {
+        clearTimeout(element.copyTimeout);
+    }
+    
+    // Store original text and styles if not already stored
+    if (!element.dataset.originalText) {
+        element.dataset.originalText = element.textContent;
+        element.dataset.originalBg = element.style.backgroundColor || '';
+        element.dataset.originalColor = element.style.color || '';
+    }
+    
+    // Apply feedback styles
+    element.textContent = message;
+    element.style.backgroundColor = '#4CAF50';
+    element.style.color = 'white';
+    element.style.transition = 'all 0.3s ease';
+    element.style.borderRadius = '4px';
+    element.style.padding = '2px 4px';
+    
+    // Set timeout to restore original state
+    element.copyTimeout = setTimeout(() => {
+        element.textContent = element.dataset.originalText;
+        element.style.backgroundColor = element.dataset.originalBg;
+        element.style.color = element.dataset.originalColor;
+        element.style.borderRadius = '';
+        element.style.padding = '';
+        
+        // Clear the copying flag
+        element.dataset.copying = 'false';
+        
+        // Clean up the timeout reference
+        delete element.copyTimeout;
+    }, 1500); // Increased to 1.5 seconds for better user experience
+}
