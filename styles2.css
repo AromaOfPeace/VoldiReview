@@ -1,11 +1,11 @@
         :root {
             --primary: #574e8a;
             --primary-dark: #261a72;
-            --secondary: #00cec9;
+            --secondary: #0059ce;
             --dark: #2d3436;
             --light: #f5f6fa;
             --gray: #636e72;
-            --success: #00b894;
+            --success: #00acb8;
             --warning: #fdcb6e;
             --danger: #d63031;
             --accent: #aa1a00;
@@ -15,9 +15,9 @@
             --text-primary: #2d3436;
             --text-secondary: #636e72;
             --border: #e0e0e0;
-            --premium-gold: #ffd700;
+            --premium-gold: #d8c036;
             --premium-orange: #ff8c00;
-            --premium-gradient: linear-gradient(135deg, #ffd700 0%, #ff8c00 50%, #ff6b35 100%);
+            --premium-gradient: linear-gradient(135deg, #cab122 0%, #ff8c00 50%, #ff6b35 100%);
             --glow: 0 0 30px rgba(255, 215, 0, 0.4);
         }
 
@@ -29,7 +29,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #b7beda 0%, #00ffea 100%);
+            background: linear-gradient(135deg, #b7c3da 50%, #b7c6da 50%);
             color: var(--text-primary);
             line-height: 1.6;
             min-height: 100vh;
@@ -46,9 +46,9 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 40% 80%, rgba(120, 219, 226, 0.3) 0%, transparent 50%);
+                radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.459) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(255, 119, 198, 0.479) 0%, transparent 50%),
+                radial-gradient(ellipse at 40% 80%, rgba(120, 219, 226, 0.589) 0%, transparent 50%);
             animation: gradientShift 15s ease infinite;
             z-index: -1;
         }
@@ -1708,11 +1708,15 @@
         margin: 0 10px;
         padding: 30px 25px;
     }
-    
     .senkaimon-image {
-        width: 100px;
-        height: 100px;
-    }
+    width: 200px;
+    height: 100px;
+}
+
+.senkaimon-image:hover {
+    transform: scale(1.05);
+}
+    
     
     .senkaimon-card .option-header h3 {
         font-size: 1.4rem;
@@ -1728,16 +1732,20 @@
     .senkaimon-centered-container {
         padding: 10px 0;
     }
+        .senkaimon-image {
+    width: 200px;
+    height: 100px;
+}
+
+.senkaimon-image:hover {
+    transform: scale(1.05);
+}
     
     .senkaimon-card {
         margin: 0 5px;
         padding: 25px 20px;
     }
     
-    .senkaimon-image {
-        width: 80px;
-        height: 80px;
-    }
     
     .senkaimon-card .service-features {
         padding: 15px;
@@ -2734,7 +2742,7 @@
 /* Add these styles to ensure consistent width for all category containers */
 .service-section {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px; /* Reduced from 1200px */
     margin: 30px auto;
     padding: 40px;
 }
@@ -2763,13 +2771,23 @@
     margin: 20px auto 0;
 }
 
-/* Media queries to maintain consistency on smaller screens */
+/* Media queries - only make them less wide on mobile/tablet */
 @media (max-width: 992px) {
     .service-section,
     .senkaimon-centered-container,
     .epic-raids-container,
     .custom-service-container {
+        max-width: 600px; /* Make less wide on tablet */
         padding: 30px;
+    }
+    
+    .story-container {
+        max-width: 550px; /* Make Epic Raids less wide on tablet */
+        margin: 20px auto 30px;
+    }
+    
+    .senkaimon-card {
+        max-width: 550px; /* Make Senkaimon less wide on tablet */
     }
 }
 
@@ -2778,11 +2796,18 @@
     .senkaimon-centered-container,
     .epic-raids-container,
     .custom-service-container {
+        max-width: 600px; /* Make even less wide on mobile */
         padding: 25px;
     }
     
     .senkaimon-card {
+        max-width: 500px; /* Make Senkaimon less wide on mobile */
         padding: 30px 25px;
+    }
+    
+    .story-container {
+        max-width: 550px; /* Make Epic Raids less wide on mobile */
+        margin: 15px auto 25px;
     }
 }
 
@@ -2791,11 +2816,18 @@
     .senkaimon-centered-container,
     .epic-raids-container,
     .custom-service-container {
+        max-width: 100%; /* Full width on very small screens */
         padding: 20px 15px;
     }
     
     .senkaimon-card {
-        padding: 25px 20px;
+        max-width: 100%; /* Full width on very small screens */
+        padding: 15px 20px;
+    }
+    
+    .story-container {
+        max-width: 100%; /* Full width on very small screens */
+        margin: 10px auto 20px;
     }
 }
 /* Modal Styles */
